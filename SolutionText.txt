@@ -1,0 +1,122 @@
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+cat ./readme
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+##
+concatenate files and print on the standard output
+./readme location of the file ./
+##
+
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+cat ./-
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+##
+can't read files by standard cat file if it starts with -, has to have directory prior
+##
+
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+cat "spaces in this filename"
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+##
+to cat a file which has spaces put it in "quotation marks"
+##
+
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+cd inhere/
+ls -a
+cat ./.hidden
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+##
+ls -a doesn't ignore . (hidden) files
+##
+
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+cd inhere/
+file ./-file*
+cat ./-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+##
+file determines the file type so it lets the user know they have data in all (*) but one where there's ASCII text aka human readable format
+##
+
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+cd inhere/
+find ./ -type f -size 1033c ! -executable
+cat ./maybehere07/.file2
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+##
+type f is regular file of size 1033 (c is bytes) but ! is not executable
+##
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+find / -user bandit7 -group bandit6 -size 33c -type f 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+##
+The > operator redirects the output usually to a file but it can be to a device. You can also use >> to append.
+
+If you don't specify a number then the standard output stream is assumed, but you can also redirect errors:
+
+> file redirects stdout to file
+1> file redirects stdout to file
+
+2> file redirects stderr to file
+
+&> file redirects stdout and stderr to file
+> file 2>&1 redirects stdout and stderr to file
+
+/dev/null is the null device it takes any input you want and throws it away. It can be used to suppress any output.
+
+Note that > file 2>&1 is an older syntax which still works, &> file is neater, but would not have worked on older systems.
+##
+
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+grep millionth data.txt
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+##
+grep prints files matching a pattern
+##
+
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+sort data.txt | uniq -u
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+##
+sort sorts line of text and uniq reports or omits repeated lines, in this case it prints the unique line of code
+alternatively do sort data.txt | uniq -c | grep '1 ' to see the count of all repeated lines and find the unique one
+##
+
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+strings data.txt | grep "="
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+##
+this password can be found just by opening the document as it really stands out but finding it the correct way certainly helps
+strings will print only the readable characters in files and grep looks for anything that is preceeded by or part of a word with "=" symbol
+##
+
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+base64 -d data.txt
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+##
+base64 -d will decode the data and print to standard output
+##
+
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+cat data.txt | tr 'a-zA-Z' 'n-za-mN-ZA-M'
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+##
+this encryption is known as ROT13 (https://en.wikipedia.org/wiki/ROT13)
+##
+
+ssh bandit12@bandit.labs.overthewire.org -p 2220
