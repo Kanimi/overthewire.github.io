@@ -120,3 +120,31 @@ this encryption is known as ROT13 (https://en.wikipedia.org/wiki/ROT13)
 ##
 
 ssh bandit12@bandit.labs.overthewire.org -p 2220
+cp data.txt /tmp/kanimi
+cd /tmp/kanimi
+mv data.txt mydata
+xxd -r mydata > data
+file data
+zcat data > data2
+file data2
+bzcat data2 > data3
+file data3
+zcat data3 > data4
+file data4
+tar -xvf data4 data5.bin
+file data5.bin
+tar -xvf data5.bin data6.bin
+file data6.bin
+bzcat data6.bin > data7
+tar -xvf data7 data8.bin
+file data8.bin
+zcat data8.bin > data9
+file data9
+cat data9
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+##
+https://hackernoon.com/bandit-level-12-level-13-or-overthewire-bus2buz
+##
+
+ssh bandit13@bandit.labs.overthewire.org -p 2220
