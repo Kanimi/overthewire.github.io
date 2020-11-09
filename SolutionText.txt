@@ -148,3 +148,8 @@ https://hackernoon.com/bandit-level-12-level-13-or-overthewire-bus2buz
 ##
 
 ssh bandit13@bandit.labs.overthewire.org -p 2220
+cat sshkey.private
+ssh -i ./sshkey.private bandit14@localhost
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+ssh bandit14@bandit.labs.overthewire.org -p 2220
