@@ -192,3 +192,19 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
 
 ssh bandit17@bandit.labs.overthewire.org -p 2220
+diff -s passwords.old passwords.new
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220
+ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat ~/readme"
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+ssh bandit19@bandit.labs.overthewire.org -p 2220
+./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+##
+red highlight signifies that the file has elevated permissions and any commands executed through the runtime of the file will be ran as bandit20
+##
+
+ssh bandit20@bandit.labs.overthewire.org -p 2220
