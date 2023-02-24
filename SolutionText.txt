@@ -105,7 +105,7 @@ strings will print only the readable characters in files and grep looks for anyt
 
 ssh bandit10@bandit.labs.overthewire.org -p 2220
 base64 -d data.txt
-The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
 ##
 base64 -d will decode the data and print to standard output
@@ -113,7 +113,7 @@ base64 -d will decode the data and print to standard output
 
 ssh bandit11@bandit.labs.overthewire.org -p 2220
 cat data.txt | tr 'a-zA-Z' 'n-za-mN-ZA-M'
-The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
 ##
 this encryption is known as ROT13 (https://en.wikipedia.org/wiki/ROT13)
@@ -141,7 +141,7 @@ file data8.bin
 zcat data8.bin > data9
 file data9
 cat data9
-The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 ##
 https://hackernoon.com/bandit-level-12-level-13-or-overthewire-bus2buz
